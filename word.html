@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>一带一路宣传网站</title>
+    <link href="show.css" type="text/css" rel="stylesheet">
+    <script src="jquery-3.2.1.min.js"></script>
+    <script src="show.js"></script>
+    <script type="text/javascript">
+        window.onload=function() {
+            var Obtn = document.getElementById("btn4");
+            var Ot4 = document.getElementById("text4");
+            var Ot1 = document.getElementById("input1");
+            var Ot2 = document.getElementById("input2");
+            Obtn.onclick = function () {
+                var number = Ot4.value;
+                var length1=Ot1.value.length;
+                var length2=Ot2.value.length;
+                var phone = /^1[34578]\d{9}$/;
+                if(length1==0) alert("请输入标题");
+                else if(length2==0) alert("请输入内容");
+                else if (!phone.test(number)) alert("手机号码输入有误");
+                else alert("提交成功");
+            }
+        }
+    </script>
+</head>
+<body>
+<div id="logo">
+    <img src="img/logo.png">
+</div>
+<div id="right_title">
+    <div class="title">
+        <a href="index.html">首页</a>
+    </div>
+    <div class="title">
+        <a href="content.html">政策</a>
+    </div>
+    <div class="title">
+        <a href="about.html">关于</a>
+    </div>
+    <div class="title">
+        <a href="word.html">留言</a>
+    </div>
+</div>
+<div id="word">
+
+    <div id="word1">
+        <h3> &nbsp;&nbsp;我要留言</h3>
+        <b> &nbsp;&nbsp; &nbsp;&nbsp;标题：</b><input id="input1" style="height: 30px;width: 500px;"><br><br>
+        <b> &nbsp;&nbsp; &nbsp;&nbsp;内容：</b><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<textarea id="input2" style="height: 200px;width: 500px"></textarea><br>
+        <div id="phone"><input type="text" id="text4" value="请输入您的联系方式" onfocus="javascript:if(this.value=='请输入您的联系方式')this.value='';"> </div>
+        <div id="btn1">
+            <input type="button" id="btn4" value="提交" style="width: 70px;height: 40px;line-height: 10px" >
+        </div>
+    </div>
+    <div id="word2">
+        <h3> &nbsp;&nbsp;精彩评论</h3>
+        <p><b>网友提问：</b>请问“一代一路”沿线国家的具体数量</p>
+        <p><b>回复：</b>感谢关注。截至2017年11月30日，与中国签署共建“一带一路”合作协议的国家共有75个。</p>
+
+    </div>
+</div>
+
+<footer>
+    <div class="bottom2">
+        <p><a href="https://www.yidaiyilu.gov.cn/info/iList.jsp?cat_id=10358" target="_blank" class="foot1">官方动态</a>
+            <a href="https://www.yidaiyilu.gov.cn/index.htm" target="_blank" class="foot2">官方网站</a></p>
+        <p class="foot3">Copyright  谢俊峰 | 15071130</p>
+    </div>
+</footer>
+</html>

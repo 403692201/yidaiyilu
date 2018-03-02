@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>一带一路宣传网站</title>
+    <link href="show.css" type="text/css" rel="stylesheet">
+    <script src="jquery-3.2.1.min.js"></script>
+    <script src="show.js"></script>
+    <script>
+        var pictures =["img/p1.jpg","img/p2.jpg","img/p3.jpg","img/p4.jpg","img/p5.jpg","img/p6.jpg"];
+        var count1=0;
+        function run(){
+            setInterval(cycle1,1500);
+        }
+        function cycle1(){
+            count1++;
+            if(count1 == 6)   count1 = 0;
+            document.getElementById("banner").src = pictures[count1];}
+    </script>
+</head>
+<body onload = "run()">
+<div id="logo">
+    <img src="img/logo.png">
+</div>
+<div id="right_title">
+    <div class="title">
+        <a href="index.html">首页</a>
+    </div>
+    <div class="title">
+        <a href="content.html">政策</a>
+    </div>
+    <div class="title">
+        <a href="about.html">关于</a>
+    </div>
+    <div class="title">
+        <a href="word.html">留言</a>
+    </div>
+
+</div>
+<div id="content2">
+    <div id="text3"><h2>一带一路相关政策</h2></div>
+    <div id="picture">
+        <img id="banner" alt="banner" src="img/p1.jpg" height="600" width="1200">
+    </div>
+</div>
+
+<footer>
+    <div class="bottom2">
+        <p><a href="https://www.yidaiyilu.gov.cn/info/iList.jsp?cat_id=10358" target="_blank" class="foot1">官方动态</a>
+            <a href="https://www.yidaiyilu.gov.cn/index.htm" target="_blank" class="foot2">官方网站</a></p>
+        <p class="foot3">Copyright  谢俊峰 | 15071130</p>
+    </div>
+</footer>
+</html>
